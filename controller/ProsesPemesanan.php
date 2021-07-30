@@ -4,13 +4,13 @@ $db = new database();
 
 $aksi = $_GET['aksi'];
 if($aksi=="tambah"){
-	$db->input($_POST['nama'],$_POST['alamat'],$_POST['usia']);
-	header("location:../view/Tampil.php");
+	$db->input_pemesanan($_POST['idpesan'],$_POST['nama'],$_POST['alamat'],$_POST['notelp']);
+	header("location:../view/Pemesanan.php");
 }elseif($aksi=="hapus"){
-	$db->hapus($_GET['id']);
-	header("location:../view/Tampil.php");
+	$db->hapus_pemesanan($_GET['idpesan']);
+	header("location:../view/Pemesanan.php");
 }elseif($aksi=="update"){
-	$db->update($_POST['id'],$_POST['nama'],$_POST['alamat'],$_POST['usia']);
-	header("location:../view/Tampil.php");
+	$db->update_pemesanan($_POST['idpesan'],$_POST['nama'],$_POST['alamat'],$_POST['notelp']);
+	header("location:../view/Pemesanan.php");
 }
 ?>

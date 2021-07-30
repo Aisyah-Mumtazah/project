@@ -4,13 +4,13 @@ $db = new database();
 
 $aksi = $_GET['aksi'];
 if($aksi=="tambah"){
-	$db->input($_POST['nama'],$_POST['alamat'],$_POST['usia']);
-	header("location:../view/Tampil.php");
+	$db->input_tiket($_POST['idtiket'],$_POST['idadmin'],$_POST['idpesan'],$_POST['idkendaraan'],$_POST['tanggal'],$_POST['tujuan'],$_POST['harga']);
+	header("location:../view/Tiket.php");
 }elseif($aksi=="hapus"){
-	$db->hapus($_GET['id']);
-	header("location:../view/Tampil.php");
+	$db->hapus_tiket($_GET['idtiket']);
+	header("location:../view/Tiket.php");
 }elseif($aksi=="update"){
-	$db->update($_POST['id'],$_POST['nama'],$_POST['alamat'],$_POST['usia']);
-	header("location:../view/Tampil.php");
+	$db->update_tiket($_POST['idtiket'],$_POST['idadmin'],$_POST['idpesan'],$_POST['idkendaraan'],$_POST['tanggal'],$_POST['tujuan'],$_POST['harga']);
+	header("location:../view/Tiket.php");
 }
 ?>

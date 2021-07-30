@@ -49,7 +49,7 @@ class database{
 		mysqli_query($this->con,"insert into pemesanan values('$id','$nama','$alamat','$notelp')");
 	}
 	function input_tiket($idtiket,$idadmin,$idpesan,$idkendaraan,$tanggal,$tujuan,$harga){
-		mysqli_query($this->con,"insert into user values('$idtiket','$idadmin','$idpesan','$idkendaraan','$tanggal','$tujuan','$harga')");
+		mysqli_query($this->con,"insert into tiket values('$idtiket','$idadmin','$idpesan','$idkendaraan','$tanggal','$tujuan','$harga')");
 	}
 	function hapus_login($id){
 		mysqli_query($this->con,"delete from login where id='$id'");
@@ -92,16 +92,58 @@ class database{
 		return $hasil;
 	}
 	function update_login($id,$username,$password,$status){
-		mysqli_query("update login set username='$username',password='$password',status='$status' where id='$id'");
+		mysqli_query($this->con,"update login set username='$username',password='$password',status='$status' where id='$id'");
 	}
 	function update_kendaraan($id,$nama,$jenis,$supir){
-		mysqli_query("update kendaraan set nama_kendaraan='$nama',jenis='$jenis',nama_supir='$supir' where id_kendaraan='$id'");
+		mysqli_query($this->con,"update kendaraan set nama_kendaraan='$nama',jenis='$jenis',nama_supir='$supir' where id_kendaraan='$id'");
 	}
 	function update_pemesanan($id,$nama,$alamat,$notelp){
-		mysqli_query("update pemesanan set nama='$nama',alamat='$alamat',no_telp='$notelp' where id_pemesanan='$id'");
+		mysqli_query($this->con,"update pemesanan set nama='$nama',alamat='$alamat',no_telp='$notelp' where id_pemesanan='$id'");
 	}
 	function update_tiket($idtiket,$idadmin,$idpesan,$idkendaraan,$tanggal,$tujuan,$harga){
-		mysqli_query("update user set id_admin='$idadmin',id_pemesanan='$idpesan',id_kendaraan='$idkendaraan',tanggal='$tanggal',tujuan='$tujuan',harga='$harga' where id_tiket='$idtiket'");
+		mysqli_query($this->con,"update tiket set id_admin='$idadmin',id_pemesanan='$idpesan',id_kendaraan='$idkendaraan',tanggal_pesan='$tanggal',tujuan='$tujuan',harga='$harga' where id_tiket='$idtiket'");
+	}
+	function lastdata_login(){
+		$data=mysqli_query($this->con,"select id from login order by id desc limit 1");
+		while($d=mysqli_fetch_array($data)){
+			$hasil[]=$d;
+		}
+		return $hasil;
+	}
+	function lastdata_pemesanan(){
+		$data=mysqli_query($this->con,"select id_pemesanan from pemesanan order by id_pemesanan desc limit 1");
+		while($d=mysqli_fetch_array($data)){
+			$hasil[]=$d;
+		}
+		return $hasil;
+	}
+	function lastdata_tiket(){
+		$data=mysqli_query($this->con,"select id_tiket from tiket order by id_tiket desc limit 1");
+		while($d=mysqli_fetch_array($data)){
+			$hasil[]=$d;
+		}
+		return $hasil;
+	}
+	function drop_admin(){
+		$sql=mysqli_query($this->con,"select id from login order by id desc");
+		while($row=mysqli_fetch_array($sql)){
+			$hasil[]=$row;
+		}
+		return $hasil;
+	}
+	function drop_pesan(){
+		$sql=mysqli_query($this->con,"select id_pemesanan from pemesanan order by id_pemesanan desc");
+		while($row=mysqli_fetch_array($sql)){
+			$hasil[]=$row;
+		}
+		return $hasil;
+	}
+	function drop_kendaraan(){
+		$sql=mysqli_query($this->con,"select id_kendaraan from kendaraan order by id_kendaraan desc");
+		while($row=mysqli_fetch_array($sql)){
+			$hasil[]=$row;
+		}
+		return $hasil;
 	}
 }
 ?>
