@@ -5,6 +5,7 @@ $db = new database();
 $aksi = $_GET['aksi'];
 if($aksi=="tambah"){
 	$db->input_pemesanan($_POST['idpesan'],$_POST['nama'],$_POST['alamat'],$_POST['notelp']);
+	header("location:../view/FormPemesan.php");
 }elseif($aksi=="hapus"){
 	$db->hapus_pemesanan($_GET['idpesan']);
 	header("location:../view/TabelPemesan.php");
