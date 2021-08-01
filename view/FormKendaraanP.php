@@ -32,8 +32,7 @@
                         <div id="ProfileDropDown"
                             class="rounded hidden shadow-md bg-white absolute pin-t mt-12 mr-1 pin-r">
                             <ul class="list-reset">
-                                <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">My
-                                        account</a></li>
+                                <li><a href="../view/aboutTeam/index.html" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">About Team</a></li>
                                 <li>
                                     <hr class="border-t mx-2 border-grey-ligght">
                                 </li>
