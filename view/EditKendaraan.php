@@ -28,7 +28,7 @@
                         <img onclick="profileToggle()" class="inline-block h-8 w-8 rounded-full"
                             src="../4092564-about-mobile-ui-profile-ui-user-website_114033.png" alt="">
                         <a href="#" onclick="profileToggle()"
-                            class="text-white p-2 no-underline hidden md:block lg:block">Adam Wathan</a>
+                            class="text-white p-2 no-underline hidden md:block lg:block">Admin Travel</a>
                         <div id="ProfileDropDown"
                             class="rounded hidden shadow-md bg-white absolute pin-t mt-12 mr-1 pin-r">
                             <ul class="list-reset">
@@ -57,80 +57,48 @@
                     <div class="flex">
 
                     </div>
-                    <ul class="list-reset flex flex-col">
-                        <li class=" w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="index.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fas fa-tachometer-alt float-left mx-2"></i>
-                                Dashboard
-                                <span><i class="fas fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="FormPemesan.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fab fa-wpforms float-left mx-2"></i>
-                                Form Penginputan Data Pemesan
-                                <span><i class="fa fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="w-full h-full py-3 px-2 border-b border-light-border bg-white">
-                            <a href="FormKendaraan.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fab fa-wpforms float-left mx-2"></i>
-                                Form Penginputan Data Kendaraan
-                                <span><i class="fa fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="FormPegawai.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fab fa-wpforms float-left mx-2"></i>
-                                Form Penginputan Data Pegawai
-                                <span><i class="fa fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="FormTiket.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fab fa-wpforms float-left mx-2"></i>
-                                Form Pemesanan Tiket
-                                <span><i class="fa fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="TabelPemesan.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fas fa-table float-left mx-2"></i>
-                                Tabel Data Pemesan
-                                <span><i class="fa fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="TabelKendaraan.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fas fa-table float-left mx-2"></i>
-                                Tabel Data Kendaraan
-                                <span><i class="fa fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="TabelPegawai.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fas fa-table float-left mx-2"></i>
-                                Tabel Data Pegawai
-                                <span><i class="fa fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="TabelTiket.php"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fas fa-table float-left mx-2"></i>
-                                Tabel Data Pemesanan Tiket
-                                <span><i class="fa fa-angle-right float-right"></i></span>
-                            </a>
-                        </li>
-                    </ul>
+                <ul class="list-reset flex flex-col">
+                    <li class=" w-full h-full py-3 px-2 border-b border-light-border ">
+                        <a href="index.php"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-tachometer-alt float-left mx-2"></i>
+                            Dashboard
+                            <span><i class="fas fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="TabelPemesan.php"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-table float-left mx-2"></i>
+                            Tabel Data Pemesan
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="TabelKendaraan.php"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-table float-left mx-2"></i>
+                            Tabel Data Kendaraan
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="TabelPegawai.php"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-table float-left mx-2"></i>
+                            Tabel Data Pegawai
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="TabelTiket.php"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-table float-left mx-2"></i>
+                            Tabel Data Pemesanan Tiket
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
 
                 </aside>
                 <!--/Sidebar-->
@@ -199,7 +167,7 @@
                                             <div class="md:w-1/3"></div>
                                             <div class="md:w-2/3">
                                                 <button
-                                                    class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                                                    class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-pemesan py-2 px-4 rounded"
                                                     type="submit">
                                                     Simpan
                                                 </button>

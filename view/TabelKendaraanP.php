@@ -28,7 +28,7 @@
                         <img onclick="profileToggle()" class="inline-block h-8 w-8 rounded-full"
                             src="../4092564-about-mobile-ui-profile-ui-user-website_114033.png" alt="">
                         <a href="#" onclick="profileToggle()"
-                            class="text-white p-2 no-underline hidden md:block lg:block">Admin Travel</a>
+                            class="text-white p-2 no-underline hidden md:block lg:block">Pegawai Travel</a>
                         <div id="ProfileDropDown"
                             class="rounded hidden shadow-md bg-white absolute pin-t mt-12 mr-1 pin-r">
                             <ul class="list-reset">
@@ -58,7 +58,7 @@
                     </div>
                     <ul class="list-reset flex flex-col">
                     <li class=" w-full h-full py-3 px-2 border-b border-light-border ">
-                        <a href="index.php"
+                        <a href="indeks.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-tachometer-alt float-left mx-2"></i>
                             Dashboard
@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="TabelPemesan.php"
+                        <a href="TabelPemesanP.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-table float-left mx-2"></i>
                             Tabel Data Pemesan
@@ -74,7 +74,7 @@
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="TabelKendaraan.php"
+                        <a href="TabelKendaraanP.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-table float-left mx-2"></i>
                             Tabel Data Kendaraan
@@ -82,15 +82,7 @@
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="TabelPegawai.php"
-                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                            <i class="fas fa-table float-left mx-2"></i>
-                            Tabel Data Pegawai
-                            <span><i class="fa fa-angle-right float-right"></i></span>
-                        </a>
-                    </li>
-                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="TabelTiket.php"
+                        <a href="TabelTiketP.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-table float-left mx-2"></i>
                             Tabel Data Pemesanan Tiket
@@ -116,7 +108,7 @@
                                 </div>
                                 <button
                                     class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-semibold py-1 px-1 rounded"
-                                    type="submit"><a href = "FormKendaraan.php">Tambah Data</a>
+                                    type="submit"><a href = "FormKendaraanP.php">Tambah Data</a>
                                 </button>
                                 <div class="p-3">
                                     <table class="table-responsive w-full rounded">
@@ -143,10 +135,10 @@
                                                 <td class="border px-4 py-2"><?php echo $x['nama_supir']; ?></td>
                                                 <td class="border px-4 py-2">
                                                     <a class="bg-teal-300 cursor-pointer rounded p-1 mx-1 text-white"
-                                                        href="EditKendaraan.php?idkendaraan=<?php echo $x['id_kendaraan']; ?>&aksi=edit">
+                                                        href="EditKendaraanP.php?idkendaraan=<?php echo $x['id_kendaraan']; ?>&aksi=edit">
                                                         <i class="fas fa-edit"></i></a>
                                                     <a class="bg-teal-300 cursor-pointer rounded p-1 mx-1 text-red-500"
-                                                        href="../controller/ProsesKendaraan.php?idkendaraan=<?php echo $x['id_kendaraan'] ?>&aksi=hapus">
+                                                        href="../controller/ProsesKendaraanP.php?idkendaraan=<?php echo $x['id_kendaraan'] ?>&aksi=hapus">
                                                         <i class="fas fa-trash"></i>
                                                     </a>
                                                 </td>

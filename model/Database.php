@@ -42,7 +42,7 @@ class database{
 	function input_login($id,$username,$password,$status){
 		mysqli_query($this->con,"insert into login values('$id','$username','$password','$status')");
 	}
-	function input_kendaraan($id,$anama,$jenis,$supir){
+	function input_kendaraan($id,$nama,$jenis,$supir){
 		mysqli_query($this->con,"insert into kendaraan values('$id','$nama','$jenis','$supir')");
 	}
 	function input_pemesanan($id,$nama,$alamat,$notelp){

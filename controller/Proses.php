@@ -1,57 +1,50 @@
 <?php 
-include '../model/Database.php';
-$db=new database();
-/*$username = $_POST['username'];
+// mengaktifkan session pada php
+session_start();
+ 
+// menghubungkan php dengan koneksi database
+include '../model/koneksi.php';
+ 
+// menangkap data yang dikirim dari form login
+$username = $_POST['username'];
 $password = $_POST['password'];
  
-$login = mysqli_query("select * from login where username='$username' and password='$password'");
+ 
+// menyeleksi data user dengan username dan password yang sesuai
+$login = mysqli_query($koneksi,"select * from login where username='$username' and password='$password'");
+// menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($login);
-
+ 
+// cek apakah username dan password di temukan pada database
 if($cek > 0){
-	session_start();
-	$_SESSION['username'] = $username;
-	$_SESSION['status'] = "login";
-	header("location:../view/index.html");
+ 
+	$data = mysqli_fetch_assoc($login);
+ 
+	// cek jika user login sebagai admin
+	if($data['status']=="admin"){
+ 
+		// buat session login dan username
+		$_SESSION['username'] = $username;
+		$_SESSION['status'] = "admin";
+		// alihkan ke halaman dashboard admin
+		header("location:../view/index.php");
+ 
+	// cek jika user login sebagai pegawai
+	}else if($data['status']=="pegawai"){
+		// buat session login dan username
+		$_SESSION['username'] = $username;
+		$_SESSION['status'] = "pegawai";
+		// alihkan ke halaman dashboard pegawai
+		header("location:../view/indeks.php");
+ 
+	// cek jika user login sebagai pengurus
+	}else{
+ 
+		// alihkan ke halaman login kembali
+		header("location:../index.php?pesan=gagal");
+	}	
 }else{
-	header("location:../view/login.html");	
-}*/
-session_start();
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
-      $myusername = $_POST['username'];
-      $mypassword = $_POST['password']; 
-      
-      $sql = "SELECT id FROM login WHERE username = '$myusername' and password = '$mypassword'";
-      $result = mysqli_query($data,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
-		
-      if($count == 1) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-         
-         header("location:../view/index.html");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
- /*  $username = $_POST['username'];
-   $password = $_POST['password'];
-
-//$login = mysqli_query("select * from login where username='$username' and password='$password' and status='admin'");
-//$cek = mysqli_num_rows($login);
-  cek_admin();
-if($cek > 0){
-	session_start();
-	$_SESSION['username'] = $username;
-	$_SESSION['status'] = "login";
-	header("location:../view/index.html");
-}else{
-	header("location:../view/login.html");	
-}*/
+	header("location:../index.php?pesan=gagal");
+}
+ 
 ?>

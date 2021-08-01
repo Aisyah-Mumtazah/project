@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./dist/styles.css">
     <link rel="stylesheet" href="./dist/all.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
-    <title>Forms Pegawai</title>
+    <title>Edit Data Kendaraan</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                         <img onclick="profileToggle()" class="inline-block h-8 w-8 rounded-full"
                             src="../4092564-about-mobile-ui-profile-ui-user-website_114033.png" alt="">
                         <a href="#" onclick="profileToggle()"
-                            class="text-white p-2 no-underline hidden md:block lg:block">Admin Travel</a>
+                            class="text-white p-2 no-underline hidden md:block lg:block">Pegawai Travel</a>
                         <div id="ProfileDropDown"
                             class="rounded hidden shadow-md bg-white absolute pin-t mt-12 mr-1 pin-r">
                             <ul class="list-reset">
@@ -59,7 +59,7 @@
                     </div>
                 <ul class="list-reset flex flex-col">
                     <li class=" w-full h-full py-3 px-2 border-b border-light-border ">
-                        <a href="index.php"
+                        <a href="indeks.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-tachometer-alt float-left mx-2"></i>
                             Dashboard
@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="TabelPemesan.php"
+                        <a href="TabelPemesanP.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-table float-left mx-2"></i>
                             Tabel Data Pemesan
@@ -75,7 +75,7 @@
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="TabelKendaraan.php"
+                        <a href="TabelKendaraanP.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-table float-left mx-2"></i>
                             Tabel Data Kendaraan
@@ -83,15 +83,7 @@
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="TabelPegawai.php"
-                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                            <i class="fas fa-table float-left mx-2"></i>
-                            Tabel Data Pegawai
-                            <span><i class="fa fa-angle-right float-right"></i></span>
-                        </a>
-                    </li>
-                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="TabelTiket.php"
+                        <a href="TabelTiketP.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-table float-left mx-2"></i>
                             Tabel Data Pemesanan Tiket
@@ -115,72 +107,52 @@
                             <div
                                 class="mb-2 border-solid border-grey-light rounded border shadow-sm w-full md:w-1/2 lg:w-full">
                                 <div class="bg-gray-300 px-2 py-3 border-solid border-gray-400 border-b">
-                                    Form Pegawai
+                                    Edit Data Kendaraan
                                 </div>
                                 <div class="p-3">
-                                    <form class="w-full" action="../controller/ProsesLogin.php?aksi=tambah" method="post">
+                                    <form class="w-full" action="../controller/ProsesKendaraan.php?aksi=update" method="post">
+                                    <?php foreach($db->edit_kendaraan($_GET['idkendaraan']) as $d){ ?>
+                                        <input type="hidden" name="idkendaraan" value="<?php echo $d['id_kendaraan'] ?>">
                                         <div class="md:flex md:items-center mb-6">
                                             <div class="md:w-1/4">
                                                 <label
                                                     class="block text-gray-500 font-regular md:text-right mb-1 md:mb-0 pr-4"
                                                     for="inline-full-name">
-                                                    ID Admin
-                                                </label>
-                                            </div>
-                                            <div class="md:w-2/4">
-                                                <input
-                                                    class="bg-grey-200 appearance-none border-1 border-grey-200 rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple-light"
-                                                    id="inline-full-name" type="text" name="idadmin">
-                                            </div>
-                                            <div class="md:w-1/4">
-                                                <?php foreach($db->lastdata_login() as $c){ ?>
-                                                    <label class="block text-gray-500 font-regular md:text-right mb-1 md:mb-0 pr-4"
-                                                    for="idadmin">Sebelumnya: <?php echo $c['id']; ?></label>
-                                                <?php } ?>
-                                            </div>
-                                        </div>
-                                        <div class="md:flex md:items-center mb-6">
-                                            <div class="md:w-1/4">
-                                                <label
-                                                    class="block text-gray-500 font-regular md:text-right mb-1 md:mb-0 pr-4"
-                                                    for="inline-full-name">
-                                                    Username
-                                                </label>
-                                            </div>
-                                            <div class="md:w-2/4">
-                                                <input
-                                                    class="bg-grey-200 appearance-none border-1 border-grey-200 rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple-light"
-                                                    id="inline-full-name" type="text" name="username">
-                                            </div>
-                                        </div>
-                                        <div class="md:flex md:items-center mb-6">
-                                            <div class="md:w-1/4">
-                                                <label
-                                                    class="block text-grey font-regular md:text-right mb-1 md:mb-0 pr-4"
-                                                    for="inline-username">
-                                                    Password
-                                                </label>
-                                            </div>
-                                            <div class="md:w-2/4">
-                                                <input
-                                                    class="bg-grey-200 appearance-none border-1 border-grey-200 rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple-light"
-                                                    id="inline-username" type="password" name="password"
-                                                    placeholder="******************">
-                                            </div>
-                                        </div>
-                                        <div class="md:flex md:items-center mb-6">
-                                            <div class="md:w-1/4">
-                                                <label
-                                                    class="block text-gray-500 font-regular md:text-right mb-1 md:mb-0 pr-4"
-                                                    for="inline-full-name">
-                                                    Status
+                                                    Nama Kendaraan
                                                 </label>
                                             </div>
                                             <div class="md:w-3/4">
-                                                <input type="radio" name="status" id="Admin" value="Admin">
-                                                <label for="Admin"> admin </label><br>
-                                                <input type="radio" name="status" id="Pegawai" value="Pegawai" checked> 
-                                                <label for="Pegawai"> pegawai </label><br>
+                                                <input
+                                                    class="bg-grey-200 appearance-none border-1 border-grey-200 rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple-light"
+                                                    id="inline-full-name" type="text" name="nama" value="<?php echo $d['nama_kendaraan'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="md:flex md:items-center mb-6">
+                                            <div class="md:w-1/4">
+                                                <label
+                                                    class="block text-gray-500 font-regular md:text-right mb-1 md:mb-0 pr-4"
+                                                    for="inline-full-name">
+                                                    Jenis Kendaraan
+                                                </label>
+                                            </div>
+                                            <div class="md:w-3/4">
+                                                <input
+                                                    class="bg-grey-200 appearance-none border-1 border-grey-200 rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple-light"
+                                                    id="inline-full-name" type="text" name="jenis" value="<?php echo $d['jenis'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="md:flex md:items-center mb-6">
+                                            <div class="md:w-1/4">
+                                                <label
+                                                    class="block text-gray-500 font-regular md:text-right mb-1 md:mb-0 pr-4"
+                                                    for="inline-full-name">
+                                                    Nama Supir
+                                                </label>
+                                            </div>
+                                            <div class="md:w-3/4">
+                                                <input
+                                                    class="bg-grey-200 appearance-none border-1 border-grey-200 rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple-light"
+                                                    id="inline-full-name" type="text" name="supir" value="<?php echo $d['nama_supir'] ?>">
                                             </div>
                                         </div>
                                         <div class="md:flex md:items-center">
@@ -193,6 +165,7 @@
                                                 </button>
                                             </div>
                                         </div>
+                                        <?php } ?>
                                     </form>
                                 </div>
                             </div>

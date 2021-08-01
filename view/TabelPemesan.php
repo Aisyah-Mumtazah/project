@@ -26,13 +26,13 @@
                 </div>
                 <div class="p-1 flex flex-row items-center">
                     <img onclick="profileToggle()" class="inline-block h-8 w-8 rounded-full" src="../4092564-about-mobile-ui-profile-ui-user-website_114033.png" alt="">
-                    <a href="#" onclick="profileToggle()" class="text-white p-2 no-underline hidden md:block lg:block">Adam Wathan</a>
-                    <div id="ProfileDropDown" class="rounded hidden shadow-md bg-white absolute pin-t mt-12 mr-1 pin-r">
+                    <a href="#" onclick="profileToggle()" class="text-white p-2 no-underline hidden md:block lg:block">Admin Travel</a>
+                    <div id="ProfileDropDown" class="rounded hidden shadow-md bg-white absolute pin-t mt-12 mr-10 pin-r">
                         <ul class="list-reset">
                           <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">My account</a></li>
                           <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Notifications</a></li>
                           <li><hr class="border-t mx-2 border-grey-ligght"></li>
-                          <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Logout</a></li>
+                          <li><a href="../login.php" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,38 +56,6 @@
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="FormPemesan.php"
-                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                            <i class="fab fa-wpforms float-left mx-2"></i>
-                            Form Penginputan Data Pemesan
-                            <span><i class="fa fa-angle-right float-right"></i></span>
-                        </a>
-                    </li>
-                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="FormKendaraan.php"
-                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                            <i class="fab fa-wpforms float-left mx-2"></i>
-                            Form Penginputan Data Kendaraan
-                            <span><i class="fa fa-angle-right float-right"></i></span>
-                        </a>
-                    </li>
-                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="FormPegawai.php"
-                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                            <i class="fab fa-wpforms float-left mx-2"></i>
-                            Form Penginputan Data Pegawai
-                            <span><i class="fa fa-angle-right float-right"></i></span>
-                        </a>
-                    </li>
-                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="FormTiket.php"
-                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                            <i class="fab fa-wpforms float-left mx-2"></i>
-                            Form Pemesanan Tiket
-                            <span><i class="fa fa-angle-right float-right"></i></span>
-                        </a>
-                    </li>
-                    <li class="w-full h-full py-3 px-2 border-b border-light-border bg-white">
                         <a href="TabelPemesan.php"
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-table float-left mx-2"></i>
@@ -136,6 +104,12 @@
                             <div class="bg-gray-200 px-2 py-3 border-solid border-gray-200 border-b">
                                 Tabel Data Pemesan
                             </div>
+
+                            <button
+                                class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-semibold py-1 px-1 rounded"
+                                type="submit"><a href = "FormPemesan.php">Tambah Data</a>
+                            </button>
+
                             <div class="p-3">
                                 <table class="table-responsive w-full rounded">
                                     <thead>
@@ -161,7 +135,7 @@
                                             <td class="border px-4 py-2"><?php echo $x['no_telp']; ?></td>
                                             <td class="border px-4 py-2">
                                                 <a class="bg-teal-300 cursor-pointer rounded p-1 mx-1 text-white"
-                                                href="EditPemesanan.php?idpesan=<?php echo $x['id_pemesanan']; ?>&aksi=edit">
+                                                href="EditPemesan.php?idpesan=<?php echo $x['id_pemesanan']; ?>&aksi=edit">
                                                         <i class="fas fa-edit"></i></a>
                                                 <a class="bg-teal-300 cursor-pointer rounded p-1 mx-1 text-red-500"
                                                 href="../controller/ProsesPemesanan.php?idpesan=<?php echo $x['id_pemesanan']; ?>&aksi=hapus">
