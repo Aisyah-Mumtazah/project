@@ -40,7 +40,7 @@
                                 <li>
                                     <hr class="border-t mx-2 border-grey-ligght">
                                 </li>
-                                <li><a href="../login.php"
+                                <li><a href="../index.php"
                                         class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Logout</a>
                                 </li>
                             </ul>
