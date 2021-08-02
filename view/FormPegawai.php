@@ -174,9 +174,9 @@
                                             </div>
                                             <div class="md:w-3/4">
                                                 <input type="radio" name="status" id="Admin" value="Admin">
-                                                <label for="Admin"> admin </label><br>
+                                                <label for="admin"> admin </label><br>
                                                 <input type="radio" name="status" id="Pegawai" value="Pegawai" checked> 
-                                                <label for="Pegawai"> pegawai </label><br>
+                                                <label for="pegawai"> pegawai </label><br>
                                             </div>
                                         </div>
                                         <div class="md:flex md:items-center">
