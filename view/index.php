@@ -94,7 +94,7 @@
                 <div class="flex flex-col">
                     <!-- Stats Row Starts Here -->
                     <div class="flex flex-1 flex-col md:flex-row lg:flex-row mx-2">
-                        <img src = dist/images/index_background.png>
+                        <img src = dist/images/confetti.png>
                         
                     </div>
 
