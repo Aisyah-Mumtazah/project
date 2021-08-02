@@ -42,7 +42,7 @@
 
         <div class="flex flex-1">
             <!--Sidebar-->
-            <aside id="sidebar" class="bg-side-nav w-1/2 md:w-1/6 lg:w-1/6 border-r border-side-nav hidden md:block lg:block">
+            <aside id="sidebar" class="bg-side-nav w-1/2 md:w-1/6 lg:w-1/6 border-r border-side-nav hidden md:block lg:block" style="margin-top: 60px">
 
                 <ul class="list-reset flex flex-col">
                     <li class=" w-full h-full py-3 px-2 border-b border-light-border bg-white">
@@ -82,7 +82,7 @@
             </aside>
             <!--/Sidebar-->
             <!--Main-->
-            <main class="bg-white-300 flex-1 p-3 overflow-hidden">
+            <main class="bg-white-300 flex-1 p-3 overflow-hidden" style="margin-top: 60px">
 
                 <div class="flex flex-col">
                     <!-- Stats Row Starts Here -->
