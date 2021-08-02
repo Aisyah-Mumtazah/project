@@ -156,8 +156,8 @@
                                             </div>
                                             <div class="md:w-3/4">
                                                 <?php $pilih=$d['status']; ?>
-                                                <input type="radio" name="status" value="Admin" <?php if ($pilih=="Admin"){echo 'checked';} ?>> Admin <br>
-                                                <input type="radio" name="status" value="Pegawai" <?php if ($pilih=="Pegawai"){echo 'checked';} ?>> Pegawai <br>        
+                                                <input type="radio" name="status" value="Admin" <?php if ($pilih=="Admin"){echo 'checked';} ?>> admin <br>
+                                                <input type="radio" name="status" value="Pegawai" <?php if ($pilih=="Pegawai"){echo 'checked';} ?>> pegawai <br>        
                                             </div>
                                         </div>
                                         <div class="md:flex md:items-center">
